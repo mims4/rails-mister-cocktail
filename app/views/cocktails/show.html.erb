@@ -1,1 +1,17 @@
-
+<div class='container'>
+  <h1><%= @cocktail.name %></h1>
+    <ul>
+      <% @cocktail.doses.each do |dose|%>
+      <li>ingredients : <%= dose.ingredient.name %></li>
+      <li>doses : <%= dose.description %> <%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "DELETE ?" } %></li>
+      <% end %>
+    </ul>
+    <hr>
+    <div>
+      <%= link_to 'Add a new dose', new_cocktail_dose_path(@cocktail), :class => "btn btn-primary" %>
+    </div>
+    <hr>
+    <div class="btn btn-primary">
+    <%= link_to 'Back to Cocktails list', cocktails_path, :class => "btn btn-primary" %>
+    </div>
+</div>

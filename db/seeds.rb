@@ -10,6 +10,10 @@ require 'json'
 
 Ingredient.destroy_all
 
+Cocktail.create(name: 'Cuba Libre')
+Cocktail.create(name: 'Screwdriver')
+Cocktail.create(name: 'Long Island Ice Tea')
+
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 drink_list = open(url).read
 drinks = JSON.parse(drink_list)
