@@ -11,3 +11,16 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+body {
+  background-image: url(https://res.cloudinary.com/mims/image/upload/v1605277558/cocktail_background_aundmd.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+h1 {
+color: white;
+text-align: center;
+}
